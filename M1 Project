@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 1 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+// NOTE: You can enter both code and explanations. For an explanation, start
+//       the line with '//' which indicates a comment.
+
+// NOTE: console.log prints text to the browser console that you can enable
+//       to see the output. It is a little bit more convenient than alert so
+//       we will use it most of the time.
+
+
+
+// Variables
+var name = "Will"; // Variable storing the name
+alert(name); // Alerts "Will"
+
+var first = 13; // First variable
+var second = 26; // Second variable
+alert(first + second); // Alerts 39
+
+// Values
+var string_variable = "10"; // String variable
+var number_variable = 99; // Number variable
+alert(string_variable + number_variable); // Alerts "1099" (string concatenation)
+
+// Expressions
+// 1. The result of 13 % 5 will be 3, as 13 divided by 5 leaves a remainder of 3.
+
+// 2. Output explanation:
+var num = 3;
+console.log(num++); // Prints 3, then num becomes 4
+console.log(++num); // Increments num to 5, then prints 5
+
+// 3. Remove the ambiguity:
+console.log((2 * 3) + 3 - (4 / 3)); // Corrected expression
+
+
+
+</script>
+</head>
+<body>
+  See console!
+</body>
+</html>
