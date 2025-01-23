@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 2 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//-------//
+// Input //
+//-------//
+console.log("Input");
+
+// 1. Prompt the user for their name. Then politely greet them with a short
+//    message that includes their name.
+var name = prompt("What's your name?");
+console.log("Hello, " + name + "! Welcome to the program.");
+
+
+
+//----//
+// If //
+//----//
+console.log("If");
+
+// 1. Write a program that asks for a percentage and then shows the letter
+//    grade you would earn in this course (look at the syllabus). You can
+//    convert a string to a number in this way (you have to define
+//    percentageString):
+var percentageString = prompt("Enter your percentage:");
+var percentage = parseFloat(percentageString);
+
+if (percentage >= 90) {
+    console.log("You earned an A!");
+} else if (percentage >= 80) {
+    console.log("You earned a B!");
+} else if (percentage >= 70) {
+    console.log("You earned a C!");
+} else if (percentage >= 60) {
+    console.log("You earned a D!");
+} else {
+    console.log("You earned an F!");
+}
+
+
+
+//--------//
+// Arrays //
+//--------//
+console.log("Arrays");
+
+// Use this array in the next questions.
+
+var cities = ["Pittsburgh", "New York", "Chicago", "Los Angeles", "Atlanta"];
+
+// 1. Add San Francisco to the array.
+cities.push("San Francisco");
+
+// 2. Remove Los Angeles from the array.
+var index = cities.indexOf("Los Angeles");
+if (index > -1) {
+    cities.splice(index, 1);
+}
+
+// 3. Insert Seattle as the first city into the array.
+cities.unshift("Seattle");
+console.log(cities);
+
+
+
+//-----------//
+// For Loops //
+//-----------//
+console.log("For Loops");
+
+// 1. Prompt the user for a city. Then proceed to check if the city is in
+//    the cities array. Notify the user of the outcome (either through
+//    console.log or alert).
+var cityToCheck = prompt("Enter a city:");
+if (cities.includes(cityToCheck)) {
+    console.log(cityToCheck + " is in the array.");
+} else {
+    console.log(cityToCheck + " is not in the array.");
+}
+
+// 2. Write a program that calculates all multiplication tables up 10,
+//    1 x 1 = 1, 1 x 2 = 2, ..., and store the results in an array. You should
+//    output the complete computation as a string, i.e., the first entry in the
+//    array will be "1 x 1 = 1".
+var multiplicationTables = [];
+for (var i = 1; i <= 10; i++) {
+    for (var j = 1; j <= 10; j++) {
+        multiplicationTables.push(i + " x " + j + " = " + (i * j));
+    }
+}
+console.log(multiplicationTables);
+
+</script>
+</head>
+<body>
+  See console!
+</body>
+</html>
