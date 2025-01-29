@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CMPS 162: Module 4 Programming Project</title>
+<style>* { font-family: monospace; }</style>
+<script>
+
+//-----------//
+// Functions //
+//-----------//
+console.log("Functions");
+
+// 1. Write a function named 'greet' that greets the user. Make sure that you
+//    call it as well.
+function greet() {
+  console.log("Hello, user!");
+}
+greet();
+
+// 2. Write a function named 'sumAndPrint' that takes two numbers as parameters,
+//    adds them together, and prints the result to the console.
+function sumAndPrint(a, b) {
+  const result = a + b;
+  console.log(result);
+}
+
+// 3. Write a function named 'sum' that takes two numbers as parameters,
+//    adds them together, and returns the result.
+function sum(a, b) {
+  return a + b;
+}
+
+// 4. Write a function named 'findSmallest' that finds the smallest number in
+//    an array. For example, the answer for [23, 54, 3, 6, 4, 46] should be the
+//    number 3. Note that the function should take an array as input data.
+function findSmallest(arr) {
+  return Math.min(...arr);
+}
+
+// 5. Define and implement a function named 'everySecondElement' that takes as
+//    input an array and returns every second element in a new array. For
+//    example, everySecondElement([1, 2, 3, 4, 5, 6]) should return [2, 4, 6].
+//    Hint: one solution uses the % operator.
+function everySecondElement(arr) {
+  return arr.filter((_, index) => index % 2 === 1);
+}
+
+
+
+//--------//
+// Switch //
+//--------//
+console.log("Switch");
+
+// 1. Create a date object and get the month as a number. Use a switch statement
+//    to convert it to text, e.g., 0 becomes January.
+const date = new Date();
+const month = date.getMonth();
+
+let monthText;
+switch (month) {
+  case 0:
+    monthText = "January";
+    break;
+  case 1:
+    monthText = "February";
+    break;
+  // Add other months here...
+  default:
+    monthText = "Unknown month";
+}
+
+
+
+//-------//
+// While //
+//-------//
+console.log("While");
+
+// 1. Create a factorial_while function that uses a while loop but otherwise
+//    returns the same results as the following function.
+function factorial_while(n) {
+  let total = 1;
+  let i = 1;
+  while (i <= n) {
+    total *= i;
+    i++;
+  }
+  return total;
+}
+
+function factorial_for(n) {
+  var total = 1;
+  for (var i = 1; i <= n; i++) {
+    total *= i;
+  }
+  return total;
+}
+
+
+
+//----------//
+// Do-While //
+//----------//
+console.log("Do-While");
+
+// 1. Do the same for a factorial_do_while function.
+function factorial_do_while(n) {
+  let total = 1;
+  let i = 1;
+  do {
+    total *= i;
+    i++;
+  } while (i <= n);
+  return total;
+}
+
+</script>
+</head>
+<body>
+  See console!
+</body>
+</html>
